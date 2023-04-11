@@ -4,7 +4,14 @@
       <div class="slide-bg">
         <img
           class="slide-bg-img"
-          [src]="'https://image.tmdb.org/t/p/original' + item.backdrop_path"
+          *ngIf="item.backdrop_path"
+          [src]="imagesSizes.large + item.backdrop_path"
+          alt=""
+        />
+        <img
+          class="slide-bg-img"
+          *ngIf="!item.backdrop_path"
+          [src]="imagesSizes.large + item.poster_path"
           alt=""
         />
       </div>
@@ -21,7 +28,7 @@
             <span>{{ item.release_date | date : "yyyy" }}</span>
           </div>
         </div>
-        <div class="desc mt-6">
+        <div *ngIf="page == 'home' || page == 'movie'" class="desc mt-6">
           {{ item.overview }}
         </div>
       </div>

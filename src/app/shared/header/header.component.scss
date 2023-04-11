@@ -13,8 +13,11 @@ header {
 
     &-logo {
       display: block;
+      z-index: 2;
+      position: relative;
+      top: 2rem;
       img {
-        width: 83px;
+        width: 104px;
       }
     }
 

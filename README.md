@@ -30,5 +30,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 --host-header="localhost:PORT"
 
+## Reason for creating the safe pipe
+
+The Url sanitization was causing the embedded videos to keep refresh when I create a function to return the sanitized url.
+
 ## Github page
+
 https://ceekem.github.io/MovieApp/

@@ -1,5 +1,11 @@
 @import "../../../styles/colors";
 
+.m-slider {
+  height: 18rem !important;
+  overflow: hidden !important;
+  display: block;
+}
+
 :host ::ng-deep {
   .p-tabview-nav {
     justify-content: center;

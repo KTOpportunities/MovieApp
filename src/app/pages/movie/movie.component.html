@@ -1,5 +1,10 @@
 <ng-container *ngIf="movie">
-  <slider [items]="[movie]" page="movie" [isBanner]="true"></slider>
+  <slider
+    [items]="[movie]"
+    page="movie"
+    [isBanner]="true"
+    class="m-slider"
+  ></slider>
 
   <p-tabView>
     <p-tabPanel header="overview">
@@ -53,7 +58,15 @@
         </div>
       </div>
     </p-tabPanel>
-    <p-tabPanel header="Videos"> Content 2 </p-tabPanel>
+    <p-tabPanel header="Videos">
+      <div class="grid">
+        <ng-container *ngFor="let video of movieVideos">
+          <div class="col-12 mid:col-4 lg:col-4">
+            <video-embed [key]="video.key" [site]="video.site"></video-embed>
+          </div>
+        </ng-container>
+      </div>
+    </p-tabPanel>
     <p-tabPanel header="Photos"> Content 3 </p-tabPanel>
   </p-tabView>
 </ng-container>

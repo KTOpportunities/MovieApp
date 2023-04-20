@@ -5,6 +5,11 @@ export interface MovieDto {
   total_results: number;
 }
 
+export interface MovieVideosDTO {
+  id: number;
+  results: MovieVideos[];
+}
+
 export interface Movie {
   adult: boolean;
   backdrop_path: string;
@@ -55,4 +60,17 @@ export interface SpokenLanguage {
   english_name: string;
   iso_639_1: string;
   name: string;
+}
+
+export interface MovieVideos {
+  // iso_639_1: string;
+  // iso_3166_1: string;
+  // name: string;
+  key: string;
+  site: string;
+  // size: number;
+  // type: string;
+  // official: boolean;
+  // published_at: string;
+  // id: string;
 }
